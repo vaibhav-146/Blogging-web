@@ -73,7 +73,7 @@ async function loadPost() {
         <div class="post-meta">${new Date(blog.created_at).toLocaleDateString()} • ${blog.reading_time || 5} min read • ${blog.likes} likes</div>
       </div>
       <div class="post-content">${blog.content}</div>
-      <button class="like-btn" onclick="likePo st()">👍 Like (${blog.likes})</button>
+      <button class="like-btn" onclick="likePost()">👍 Like (${blog.likes})</button>
     `;
 
     loadComments();
