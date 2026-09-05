@@ -1,0 +1,135 @@
+<title>Blog Detail - Jeet's Journal</title>
+<link rel="stylesheet" href="css/global.css">
+<style>
+main { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
+.back-link { color: var(--accent); text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+.post-header { margin-bottom: 2rem; }
+.post-header h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.post-meta { color: var(--text-secondary); margin-bottom: 1rem; }
+.post-content { line-height: 1.8; color: var(--text-secondary); }
+.post-content h2 { font-size: 1.75rem; margin: 2rem 0 1rem; color: var(--text-primary); }
+.post-content p { margin-bottom: 1rem; }
+.like-btn { background: var(--accent); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; font-weight: 600; margin: 2rem 0; }
+.like-btn:hover { background: var(--accent-hover); }
+.comments-section { margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem; }
+.comment { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+.comment-author { font-weight: 600; margin-bottom: 0.5rem; }
+.comment-form input, .comment-form textarea { width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 6px; margin-bottom: 1rem; background: var(--bg-secondary); color: var(--text-primary); }
+.comment-form button { background: var(--accent); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; }
+</style>
+<script src="js/theme.js"></script>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">Jeet's Journal</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+  </div>
+</nav>
+
+<main>
+  <a href="blogs.html" class="back-link">← Back to Blogs</a>
+  <article id="post">
+    <p>Loading post...</p>
+  </article>
+
+  <div class="comments-section">
+    <h2>Comments</h2>
+    <div id="comments-list"></div>
+    <h3>Leave a Comment</h3>
+    <form class="comment-form" onsubmit="submitComment(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="comment" rows="4" placeholder="Your comment..." required></textarea>
+      <button type="submit">Post Comment</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Jeet's Journal. All rights reserved.</p>
+</footer>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const slug = params.get('slug');
+let blogId;
+
+async function loadPost() {
+  try {
+    const res = await fetch(`/api/blogs/${slug}`);
+    const blog = await res.json();
+    blogId = blog.id;
+
+    document.getElementById('post').innerHTML = `
+      <div class="post-header">
+        <h1>${blog.title}</h1>
+        <div class="post-meta">${new Date(blog.created_at).toLocaleDateString()} • ${blog.reading_time || 5} min read • ${blog.likes} likes</div>
+      </div>
+      <div class="post-content">${blog.content}</div>
+      <button class="like-btn" onclick="likePo st()">👍 Like (${blog.likes})</button>
+    `;
+
+    loadComments();
+  } catch(e) {
+    document.getElementById('post').innerHTML = '<p>Post not found</p>';
+  }
+}
+
+async function likePost() {
+  try {
+    const res = await fetch(`/api/likes/${blogId}/like`, { method: 'POST' });
+    const data = await res.json();
+    location.reload();
+  } catch(e) {}
+}
+
+async function loadComments() {
+  try {
+    const res = await fetch(`/api/comments/${blogId}`);
+    const comments = await res.json();
+    const container = document.getElementById('comments-list');
+    if (comments.length === 0) {
+      container.innerHTML = '<p>No comments yet</p>';
+      return;
+    }
+    container.innerHTML = comments.map(c => `
+      <div class="comment">
+        <div class="comment-author">${c.author_name}</div>
+        <p>${c.comment_text}</p>
+        <small>${new Date(c.created_at).toLocaleDateString()}</small>
+      </div>
+    `).join('');
+  } catch(e) {}
+}
+
+async function submitComment(e) {
+  e.preventDefault();
+  const data = {
+    blog_id: blogId,
+    author_name: document.getElementById('name').value,
+    author_email: document.getElementById('email').value,
+    comment_text: document.getElementById('comment').value
+  };
+
+  try {
+    await fetch('/api/comments', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    document.getElementById('comment').value = '';
+    loadComments();
+  } catch(e) {
+    alert('Failed to post comment');
+  }
+}
+
+loadPost();
+</script>
