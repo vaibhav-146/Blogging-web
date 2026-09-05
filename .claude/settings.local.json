@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:emilkowal.ski)",
+      "WebFetch(domain:www.tasteskill.dev)",
+      "WebFetch(domain:impeccable.style)",
+      "WebSearch",
+      "Bash(ls -la \"$HOME/.claude/skills/\" 2>/dev/null || echo \"Skills directory not found\")",
+      "Read(//c/Users/jeetv/.claude/**)",
+      "Bash(mkdir -p \"$HOME/.claude/skills\")",
+      "Bash(mkdir -p frontend backend database)",
+      "Bash(git add *)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\jeetv\\.claude",
+      "J:\\claude code"
+    ]
+  }
+}
