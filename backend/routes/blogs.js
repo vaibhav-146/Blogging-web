@@ -4,7 +4,18 @@ const pool = require('../db');
 
 const router = express.Router();
 
-// GET all blogs (public)
+// GET all blogs including drafts (admin only)
+router.get('/all', authMiddleware, async (req, res) => {
+  try {
+    const result = await pool.query('SELECT * FROM blogs ORDER BY created_at DESC');
+    res.json(result.rows);
+  } catch (error) {
+    console.error('Error fetching all blogs:', error);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+// GET all published blogs (public)
 router.get('/', async (req, res) => {
   try {
     const { category, search } = req.query;

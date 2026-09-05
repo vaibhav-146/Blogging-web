@@ -444,7 +444,7 @@ function handleLogout() {
 // Blogs
 async function loadBlogs() {
   try {
-    const res = await fetch('/api/blogs', { headers });
+    const res = await fetch('/api/blogs/all', { headers });
     const blogs = await res.json();
     const tbody = document.getElementById('blogs-body');
 
@@ -491,7 +491,7 @@ function closeBlogModal() {
 
 async function loadBlogForEdit(id) {
   try {
-    const res = await fetch('/api/blogs', { headers });
+    const res = await fetch('/api/blogs/all', { headers });
     const blogs = await res.json();
     const blog = blogs.find(b => b.id === id);
 
@@ -566,8 +566,8 @@ async function deleteBlog(id, title) {
 // Comments
 async function loadComments() {
   try {
-    const blogsRes = await fetch('/api/blogs', { headers });
-    const blogs = await res.json();
+    const blogsRes = await fetch('/api/blogs/all', { headers });
+    const blogs = await blogsRes.json();
 
     let allComments = [];
     for (const blog of blogs) {
