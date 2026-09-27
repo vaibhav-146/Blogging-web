@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIGNAL — AI Insights, Weekly</title>
+  <meta name="description" content="SIGNAL is a weekly publication covering machine learning, deep learning, and the ideas shaping applied AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">SIGNAL<span>.</span></a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Weekly AI Briefing</p>
+          <h1 class="hero-title">Clear signal in a <em>noisy</em> AI landscape.</h1>
+          <p class="hero-sub">
+            SIGNAL breaks down the research, tools, and ideas shaping applied AI —
+            written for builders who don't have time to read every paper.
+          </p>
+          <div class="hero-actions">
+            <a href="blog.html" class="btn btn-primary">Read the blog</a>
+            <a href="#newsletter" class="btn btn-ghost">Subscribe free</a>
+          </div>
+          <div class="waveform" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="glass hero-panel">
+          <p class="hero-panel-label">This week on SIGNAL</p>
+          <div class="stat-row">
+            <span class="stat-label">New articles</span>
+            <span class="stat-num">12</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Papers reviewed</span>
+            <span class="stat-num">34</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Reader briefings</span>
+            <span class="stat-num">8,900+</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Featured</p>
+            <h2 class="section-title" id="featured-heading">Editor's pick this week</h2>
+          </div>
+        </div>
+
+        <article class="glass featured-card">
+          <div class="featured-media" aria-hidden="true">
+            <div class="signal-bar"></div>
+          </div>
+          <div class="featured-body">
+            <span class="tag">Deep Learning</span>
+            <h3><a href="blog.html">How Attention Mechanisms Changed Everything</a></h3>
+            <p>
+              A grounded walkthrough of the mechanism behind modern language
+              models — why it replaced recurrence, and what it actually
+              computes under the hood.
+            </p>
+            <p class="meta">
+              <span>Aditi Rao</span>
+              <span class="meta-dot"></span>
+              <span>Aug 1, 2026</span>
+              <span class="meta-dot"></span>
+              <span>9 min read</span>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="latest-heading">
+      <div class="container content-grid">
+        <div>
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Fresh</p>
+              <h2 class="section-title" id="latest-heading">Latest posts</h2>
+            </div>
+            <a href="blog.html" class="btn btn-ghost">View all posts</a>
+          </div>
+
+          <div class="post-grid">
+            <article class="glass post-card">
+              <div class="post-thumb" aria-hidden="true"></div>
+              <div class="post-body">
+                <span class="tag">NLP</span>
+                <h3><a href="blog.html">Small Models, Big Ideas: The Rise of Efficient AI</a></h3>
+                <p>Why distillation and quantization are becoming as important as scale.</p>
+                <a href="blog.html" class="post-link">Read article →</a>
+              </div>
+            </article>
+
+            <article class="glass post-card">
+              <div class="post-thumb" aria-hidden="true"></div>
+              <div class="post-body">
+                <span class="tag">Ethics &amp; Policy</span>
+                <h3><a href="blog.html">Inside Reinforcement Learning from Human Feedback</a></h3>
+                <p>A practical look at how preference data actually shapes model behavior.</p>
+                <a href="blog.html" class="post-link">Read article →</a>
+              </div>
+            </article>
+
+            <article class="glass post-card">
+              <div class="post-thumb" aria-hidden="true"></div>
+              <div class="post-body">
+                <span class="tag">Tools</span>
+                <h3><a href="blog.html">The Quiet Revolution of On-Device AI</a></h3>
+                <p>Phones and laptops are quietly getting real inference power. Here's why it matters.</p>
+                <a href="blog.html" class="post-link">Read article →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <aside class="sidebar" aria-label="Sidebar">
+          <div class="glass sidebar-block">
+            <h4>Search articles</h4>
+            <form class="search-form" role="search" action="blog.html" method="get">
+              <label for="sidebarSearch" style="position:absolute;left:-9999px;">Search articles</label>
+              <input type="search" id="sidebarSearch" name="q" placeholder="Search SIGNAL…" />
+              <button type="submit" class="btn btn-primary" aria-label="Search">→</button>
+            </form>
+          </div>
+
+          <div class="glass sidebar-block">
+            <h4>Recent posts</h4>
+            <div class="recent-post">
+              <div class="recent-thumb" aria-hidden="true"></div>
+              <div>
+                <h5>Why Transformers Still Dominate</h5>
+                <span>Jul 27, 2026</span>
+              </div>
+            </div>
+            <div class="recent-post">
+              <div class="recent-thumb" aria-hidden="true"></div>
+              <div>
+                <h5>Benchmarking Vision Models in 2026</h5>
+                <span>Jul 21, 2026</span>
+              </div>
+            </div>
+            <div class="recent-post">
+              <div class="recent-thumb" aria-hidden="true"></div>
+              <div>
+                <h5>What "Alignment" Actually Means</h5>
+                <span>Jul 14, 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass sidebar-block">
+            <h4>Browse tags</h4>
+            <div class="tag-cloud">
+              <button type="button">ML</button>
+              <button type="button">NLP</button>
+              <button type="button">Vision</button>
+              <button type="button">Ethics</button>
+              <button type="button">Tools</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cat-heading" style="padding-top:0;">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Explore</p>
+            <h2 class="section-title" id="cat-heading">Browse by category</h2>
+          </div>
+        </div>
+
+        <div class="category-grid">
+          <a class="glass category-card" href="blog.html">
+            <span class="count">24 posts</span>
+            <h4>Machine Learning</h4>
+          </a>
+          <a class="glass category-card" href="blog.html">
+            <span class="count">18 posts</span>
+            <h4>Deep Learning</h4>
+          </a>
+          <a class="glass category-card" href="blog.html">
+            <span class="count">15 posts</span>
+            <h4>NLP</h4>
+          </a>
+          <a class="glass category-card" href="blog.html">
+            <span class="count">11 posts</span>
+            <h4>Computer Vision</h4>
+          </a>
+          <a class="glass category-card" href="blog.html">
+            <span class="count">9 posts</span>
+            <h4>Ethics &amp; Policy</h4>
+          </a>
+          <a class="glass category-card" href="blog.html">
+            <span class="count">13 posts</span>
+            <h4>Tools &amp; Frameworks</h4>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="newsletter">
+      <div class="container">
+        <div class="glass newsletter">
+          <p class="eyebrow" style="justify-content:center;">Stay in the loop</p>
+          <h2>Get SIGNAL in your inbox</h2>
+          <p>One email a week. No noise — just the AI developments worth knowing about.</p>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <label for="newsletterEmail" style="position:absolute;left:-9999px;">Email address</label>
+            <input type="email" id="newsletterEmail" placeholder="you@example.com" required />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+          <p class="form-note" id="newsletterNote"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="signal-bar" style="margin-bottom:40px;"></div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">SIGNAL<span>.</span></a>
+          <p>A weekly publication on applied AI — machine learning, tools, and the research that matters.</p>
+          <div class="social-row">
+            <a href="#" aria-label="SIGNAL on X">𝕏</a>
+            <a href="#" aria-label="SIGNAL on LinkedIn">in</a>
+            <a href="#" aria-label="SIGNAL on GitHub">gh</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigate</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="blog.html">Machine Learning</a></li>
+            <li><a href="blog.html">Deep Learning</a></li>
+            <li><a href="blog.html">NLP</a></li>
+            <li><a href="blog.html">Computer Vision</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 SIGNAL. All rights reserved.</p>
+        <p>Built by Jeet — first-year, P P Savani University.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

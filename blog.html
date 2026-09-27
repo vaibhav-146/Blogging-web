@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — SIGNAL</title>
+  <meta name="description" content="Browse every SIGNAL article on machine learning, deep learning, NLP, computer vision, and AI tools." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">SIGNAL<span>.</span></a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero container">
+      <p class="eyebrow">The archive</p>
+      <h1>All articles</h1>
+      <p>Every SIGNAL post in one place. Filter by topic or search for something specific.</p>
+    </section>
+
+    <section class="section" style="padding-top:24px;">
+      <div class="container content-grid">
+        <div>
+          <div class="filter-bar" id="filterBar">
+            <button type="button" class="active" data-filter="all">All</button>
+            <button type="button" data-filter="ml">Machine Learning</button>
+            <button type="button" data-filter="dl">Deep Learning</button>
+            <button type="button" data-filter="nlp">NLP</button>
+            <button type="button" data-filter="vision">Computer Vision</button>
+            <button type="button" data-filter="ethics">Ethics &amp; Policy</button>
+          </div>
+
+          <div class="post-grid" id="postGrid">
+            <article class="glass post-card" data-category="dl" data-title="how attention mechanisms changed everything">
+              <div class="post-thumb" aria-hidden="true"></div>
+              <div class="post-body">
+                <span class="tag">Deep Learning</span>
+                <h3>How Attention Mechanisms Changed Everything</h3>
+                <p>A grounded walkthrough of the mechanism behind modern language models.</p>
+                <a href="#" class="post-link">Read article →</a>
+              </div>
+            </article>
+
+            <article class="glass post-card" data-category="nlp" data-title="small models big ideas the rise of efficient ai">
+              <div class="post-thumb" aria-hidden="true"></div>
+              <div class="post-body">
+                <span class="tag">NLP</span>
+                <h3>Small Models, Big Ideas: The Rise of Efficient AI</h3>
+                <p>Why distillation and quantization are becoming as important as scale.</p>
+                <a href="#" class="post-link">Read article →</a>
+              </div>
+            </article>
+
+            <article class="glass post-card" data-category="ethics" data-title="inside reinforcement learning from human feedback">
+              <div class="post-thumb" aria-hidden="true"></div>
+              <div class="post-body">
+                <span class="tag">Ethics &amp; Policy</span>
+                <h3>Inside Reinforcement Learning from Human Feedback</h3>
+                <p>A practical look at how preference data actually shapes model behavior.</p>
+                <a href="#" class="post-link">Read article →</a>
+              </div>
+            </article>
+
+            <article class="glass post-card" data-category="ml" data-title="why transformers still dominate a 2026 retrospective">
+              <div class="post-thumb" aria-hidden="true"></div>
+              <div class="post-body">
+                <span class="tag">Machine Learning</span>
+                <h3>Why Transformers Still Dominate: A 2026 Retrospective</h3>
+                <p>A look back at the architecture that refused to be replaced.</p>
+                <a href="#" class="post-link">Read article →</a>
+              </div>
+            </article>
+
+            <article class="glass post-card" data-category="vision" data-title="benchmarking vision models in 2026">
+              <div class="post-thumb" aria-hidden="true"></div>
+              <div class="post-body">
+                <span class="tag">Computer Vision</span>
+                <h3>Benchmarking Vision Models in 2026</h3>
+                <p>Comparing the current generation of vision transformers on real-world tasks.</p>
+                <a href="#" class="post-link">Read article →</a>
+              </div>
+            </article>
+
+            <article class="glass post-card" data-category="nlp" data-title="the quiet revolution of on-device ai">
+              <div class="post-thumb" aria-hidden="true"></div>
+              <div class="post-body">
+                <span class="tag">NLP</span>
+                <h3>The Quiet Revolution of On-Device AI</h3>
+                <p>Phones and laptops are quietly getting real inference power.</p>
+                <a href="#" class="post-link">Read article →</a>
+              </div>
+            </article>
+
+            <article class="glass post-card" data-category="ethics" data-title="what alignment actually means">
+              <div class="post-thumb" aria-hidden="true"></div>
+              <div class="post-body">
+                <span class="tag">Ethics &amp; Policy</span>
+                <h3>What "Alignment" Actually Means</h3>
+                <p>Cutting through the jargon around one of AI's most overused words.</p>
+                <a href="#" class="post-link">Read article →</a>
+              </div>
+            </article>
+
+            <article class="glass post-card" data-category="ml" data-title="gradient descent intuition beyond the formula">
+              <div class="post-thumb" aria-hidden="true"></div>
+              <div class="post-body">
+                <span class="tag">Machine Learning</span>
+                <h3>Gradient Descent: Intuition Beyond the Formula</h3>
+                <p>Rebuilding the core optimization idea from the ground up, visually.</p>
+                <a href="#" class="post-link">Read article →</a>
+              </div>
+            </article>
+
+            <article class="glass post-card" data-category="dl" data-title="convolutional networks are not obsolete">
+              <div class="post-thumb" aria-hidden="true"></div>
+              <div class="post-body">
+                <span class="tag">Deep Learning</span>
+                <h3>Convolutional Networks Are Not Obsolete</h3>
+                <p>Why CNNs still win in latency-sensitive, edge-deployed vision tasks.</p>
+                <a href="#" class="post-link">Read article →</a>
+              </div>
+            </article>
+          </div>
+
+          <p class="no-results" id="noResults">No articles match your search or filter. Try a different term.</p>
+        </div>
+
+        <aside class="sidebar" aria-label="Sidebar">
+          <div class="glass sidebar-block">
+            <h4>Search articles</h4>
+            <form class="search-form" role="search" id="blogSearchForm">
+              <label for="blogSearch" style="position:absolute;left:-9999px;">Search articles</label>
+              <input type="search" id="blogSearch" placeholder="Search SIGNAL…" />
+              <button type="submit" class="btn btn-primary" aria-label="Search">→</button>
+            </form>
+          </div>
+
+          <div class="glass sidebar-block">
+            <h4>Recent posts</h4>
+            <div class="recent-post">
+              <div class="recent-thumb" aria-hidden="true"></div>
+              <div>
+                <h5>Why Transformers Still Dominate</h5>
+                <span>Jul 27, 2026</span>
+              </div>
+            </div>
+            <div class="recent-post">
+              <div class="recent-thumb" aria-hidden="true"></div>
+              <div>
+                <h5>Benchmarking Vision Models in 2026</h5>
+                <span>Jul 21, 2026</span>
+              </div>
+            </div>
+            <div class="recent-post">
+              <div class="recent-thumb" aria-hidden="true"></div>
+              <div>
+                <h5>What "Alignment" Actually Means</h5>
+                <span>Jul 14, 2026</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="signal-bar" style="margin-bottom:40px;"></div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">SIGNAL<span>.</span></a>
+          <p>A weekly publication on applied AI — machine learning, tools, and the research that matters.</p>
+          <div class="social-row">
+            <a href="#" aria-label="SIGNAL on X">𝕏</a>
+            <a href="#" aria-label="SIGNAL on LinkedIn">in</a>
+            <a href="#" aria-label="SIGNAL on GitHub">gh</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigate</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="blog.html">Machine Learning</a></li>
+            <li><a href="blog.html">Deep Learning</a></li>
+            <li><a href="blog.html">NLP</a></li>
+            <li><a href="blog.html">Computer Vision</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 SIGNAL. All rights reserved.</p>
+        <p>Built by Jeet — first-year, P P Savani University.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
