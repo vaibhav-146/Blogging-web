@@ -10,7 +10,11 @@
       "Read(//c/Users/jeetv/.claude/**)",
       "Bash(mkdir -p \"$HOME/.claude/skills\")",
       "Bash(mkdir -p frontend backend database)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "PowerShell(npm install express pg bcrypt jsonwebtoken dotenv cors)"
     ],
     "additionalDirectories": [
       "C:\\Users\\jeetv\\.claude",

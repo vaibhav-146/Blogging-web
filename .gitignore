@@ -1,13 +1,7 @@
-# GSD State Files
-.gsd/ARCHITECTURE.md
-.gsd/DECISIONS.md
-.gsd/JOURNAL.md
-.gsd/ROADMAP.md
-.gsd/SPEC.md
-.gsd/STACK.md
-.gsd/STATE.md
-.gsd/TODO.md
-
-# OS generated
-Thumbs.db
+node_modules/
+backend/node_modules/
+.env
+.env.*
+!.env.example
+*.log
 .DS_Store
